@@ -31,7 +31,7 @@ This project demonstrates how to read **temperature** and **humidity** values fr
 
 ## Software Requirements
 
-* [PlatformIO](https://platformio.org/) or Arduino IDE
+* [PlatformIO](https://platformio.org/) 
 * ESP32 board support installed
 * Required Libraries:
 
