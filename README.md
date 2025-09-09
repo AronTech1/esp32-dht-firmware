@@ -1,98 +1,83 @@
+# ESP32-WROOM DHT Sensor Firmware
 
-# ESP32 DHT22 Sensor Reading Example
+## 📌 Project Overview
+This project demonstrates how to integrate a **DHT11/DHT22 temperature and humidity sensor** with the **ESP32-WROOM module** using **PlatformIO (Arduino framework)**.  
 
-This project demonstrates how to read **temperature** and **humidity** values from a DHT sensor (DHT22 or DHT11) using an **ESP32** and print the readings to the serial monitor every minute.
-
----
-
-## Features
-
-* Reads temperature (°C) and humidity (%) from DHT11/DHT22.
-* Non-blocking timer logic using `millis()` for efficient loop operation.
-* Prints readings to the serial monitor every 60 seconds.
-* Error handling for failed sensor readings.
+The firmware reads temperature and humidity values every **1 minute** and prints them to the Serial Monitor in a human-readable format.
 
 ---
 
-## Hardware Requirements
-
-* **ESP32 Development Board**
-* **DHT11 or DHT22 sensor**
-* Jumper wires
-* Breadboard (optional)
-
-### Pin Connections (Default)
-
-* **DHT Data Pin → GPIO4** (can be changed in code)
-* **VCC → 3.3V** (preferred for ESP32, but 5V also works depending on sensor)
-* **GND → GND**
+## 🔧 Hardware Requirements
+- ESP32-WROOM development board  
+- DHT11 or DHT22 sensor  
+- 10kΩ pull-up resistor (recommended for the DHT data line)  
+- Jumper wires & breadboard  
 
 ---
 
-## Software Requirements
+## 🔌 Hardware Connections
+| ESP32 Pin | DHT Sensor Pin |
+|-----------|----------------|
+| 3.3V      | VCC            |
+| GND       | GND            |
+| GPIO4     | DATA           |
 
-* [PlatformIO](https://platformio.org/) 
-* ESP32 board support installed
-* Required Libraries:
-
-  * [DHT sensor library](https://github.com/adafruit/DHT-sensor-library)
-  * [Adafruit Unified Sensor](https://github.com/adafruit/Adafruit_Sensor)
-
-These are already listed in `platformio.ini` for PlatformIO users.
+⚠️ Note: GPIO4 is used for the DHT data line in this firmware (defined in `main.cpp`). You can change this pin assignment if needed.
 
 ---
 
-## Installation & Setup
-
-1. Clone this repository or copy the code.
-2. Open the project in **PlatformIO** or **Arduino IDE**.
-3. Connect your ESP32 via USB.
-4. Upload the code.
-5. Open **Serial Monitor** at `115200` baud to view readings.
+## 🖥️ Development Environment
+- [Visual Studio Code](https://code.visualstudio.com/)  
+- [PlatformIO IDE](https://platformio.org/install/ide?install=vscode)  
+- Arduino framework  
 
 ---
 
-## Configuration
+## 🚀 Setup Instructions
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/<your-username>/esp32-dht-firmware.git
+   cd esp32-dht-firmware
+Open the project in VS Code with PlatformIO installed.
 
-* **Sensor Type**:
+Connect your ESP32 board to your computer via USB.
 
-  ```cpp
-  #define DHTTYPE DHT22   // Change to DHT11 if using DHT11
-  ```
-* **Data Pin**:
+Build and upload the firmware:
 
-  ```cpp
-  #define DHTPIN 4   // Change if your sensor is wired to another GPIO
-  ```
-* **Update Interval**:
+bash
+Copy code
+pio run --target upload
+Open the Serial Monitor:
 
-  ```cpp
-  const long interval = 60000; // default 1 minute
-  ```
+bash
+Copy code
+pio device monitor
+Ensure the baud rate is set to 115200.
 
----
+▶️ Expected Output
+When running, you should see logs similar to:
 
-## Example Output
-
-```
+yaml
+Copy code
 DHT Sensor Reading Example
-Temperature: 25.4 °C  |  Humidity: 60.2 %
-Temperature: 25.5 °C  |  Humidity: 60.4 %
-```
+Temperature: 25.4 °C  |  Humidity: 60.1 %
+Readings will update every 60 seconds.
 
----
-
-## Troubleshooting
-
-* If you see **"Failed to read from DHT sensor!"**:
-
-  * Check wiring (especially data pin and pull-up resistor if required).
-  * Ensure the correct sensor type (`DHT11` or `DHT22`) is defined.
-  * Try a different GPIO pin if ESP32 has restrictions.
-
----
-
-## License
-
-This project is open-source and free to use under the MIT License.
+📂 Repository Structure
+makefile
+Copy code
+esp32-dht-firmware/
+ ├── src/
+ │   └── main.cpp        # Firmware source code
+ ├── include/            # Header files (optional, not used here)
+ ├── lib/                # Additional libraries (if needed)
+ ├── platformio.ini      # PlatformIO configuration
+ ├── README.md           # Documentation
+ └── .gitignore          # Ignored build files
+## 🧪 Project Notes
+- The firmware is designed for easy portability across ESP32-WROOM based boards.  
+- GPIO4 is used for the DHT data pin by default but can be reconfigured in `main.cpp`.  
+- The project uses **PlatformIO dependency management** to ensure reproducible builds.  
+📜 License
+This project is released under the MIT License.
 
