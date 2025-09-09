@@ -1,3 +1,4 @@
+
 # ESP32-WROOM DHT Sensor Firmware
 
 ## 📌 Project Overview
@@ -38,30 +39,44 @@ The firmware reads temperature and humidity values every **1 minute** and prints
    ```bash
    git clone https://github.com/<your-username>/esp32-dht-firmware.git
    cd esp32-dht-firmware
+````
+
 2. Open the project in VS Code with PlatformIO installed.
 
 3. Connect your ESP32 board to your computer via USB.
 
 4. Build and upload the firmware:
-bash
-  pio run --target upload
-5. Open the Serial Monitor:
-bash
-  pio device monitor
-Ensure the baud rate is set to 115200.
 
-▶️ Expected Output
+   ```bash
+   pio run --target upload
+   ```
+
+5. Open the Serial Monitor:
+
+   ```bash
+   pio device monitor
+   ```
+
+   Ensure the baud rate is set to **115200**.
+
+---
+
+## ▶️ Expected Output
+
 When running, you should see logs similar to:
 
-yaml
-Copy code
+```
 DHT Sensor Reading Example
 Temperature: 25.4 °C  |  Humidity: 60.1 %
+```
+
 Readings will update every 60 seconds.
 
-📂 Repository Structure
-makefile
-Copy code
+---
+
+## 📂 Repository Structure
+
+```
 esp32-dht-firmware/
  ├── src/
  │   └── main.cpp        # Firmware source code
@@ -70,10 +85,18 @@ esp32-dht-firmware/
  ├── platformio.ini      # PlatformIO configuration
  ├── README.md           # Documentation
  └── .gitignore          # Ignored build files
-## 🧪 Project Notes
-- The firmware is designed for easy portability across ESP32-WROOM based boards.  
-- GPIO4 is used for the DHT data pin by default but can be reconfigured in `main.cpp`.  
-- The project uses **PlatformIO dependency management** to ensure reproducible builds.  
-📜 License
-This project is released under the MIT License.
+```
 
+---
+
+## 🧪 Notes
+
+* This code is written as if hardware is available; testing was done via code review and simulation of logic.
+* During the interview, I will explain design decisions, assumptions, and how the firmware can be extended.
+* The project follows **clean code practices** and uses **PlatformIO dependency management** for reproducibility.
+
+---
+
+## 📜 License
+
+This project is released under the [MIT License](https://opensource.org/licenses/MIT).
