@@ -66,8 +66,6 @@ esp32-dht-firmware/
  ├── README.md           # Documentation
  └── .gitignore          # Ignored build files
 
-  ---
-
 ## 🧪 Project Notes
 - The firmware is designed for easy portability across ESP32-WROOM based boards.  
 - GPIO4 is used for the DHT data pin by default but can be reconfigured in `main.cpp`.  
