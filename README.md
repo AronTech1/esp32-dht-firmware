@@ -49,7 +49,7 @@ Ensure the baud rate is set to 115200.
 ## ▶️ Expected Output
 When running, you should see logs similar to:
 
-# DHT Sensor Reading Example
+### DHT Sensor Reading Example
 Temperature: 25.4 °C  |  Humidity: 60.1 %
 
 Readings will update every 60 seconds.
