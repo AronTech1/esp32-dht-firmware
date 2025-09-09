@@ -38,3 +38,14 @@ The firmware reads temperature and humidity values every **1 minute** and prints
    ```bash
    git clone https://github.com/<your-username>/esp32-dht-firmware.git
    cd esp32-dht-firmware
+2. Open the project in VS Code with PlatformIO installed.
+3. Connect your ESP32 board to your computer via USB.
+4. Build and upload the firmware:
+pio run --target upload
+Ensure the baud rate is set to 115200.
+
+▶️ Expected Output
+When running, you should see logs similar to:
+DHT Sensor Reading Example
+Temperature: 25.4 °C  |  Humidity: 60.1 %
+Readings will update every 60 seconds.
