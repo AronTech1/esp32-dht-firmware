@@ -56,8 +56,6 @@ DHT Sensor Reading Example
 Temperature: 25.4 °C  |  Humidity: 60.1 %  
 
 ## 📂 Repository Structure  
-
-```text
 esp32-dht-firmware/
 ├── src/
 │   └── main.cpp        # Firmware source code
