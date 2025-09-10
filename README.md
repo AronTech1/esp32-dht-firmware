@@ -46,8 +46,7 @@ The firmware reads temperature and humidity values every **1 minute** and prints
    pio run --target upload
    pio device monitor
 
-Ensure the baud rate is set to 115200.
- ---
+ - Ensure the baud rate is set to 115200.
 
 ## ▶️ Expected Output
 When running, you should see logs similar to:
