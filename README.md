@@ -55,6 +55,8 @@ When running, you should see logs similar to:
 DHT Sensor Reading Example  
 Temperature: 25.4 °C  |  Humidity: 60.1 %  
 
+---
+
 ## 📂 Repository Structure  
 ```text
 esp32-dht-firmware/
@@ -66,6 +68,8 @@ esp32-dht-firmware/
 ├── README.md           # Documentation
 └── .gitignore          # Ignored build files
 ```
+---
+
 ## Project Notes
 
 - The firmware is designed for easy portability across ESP32-WROOM based boards.
@@ -73,6 +77,8 @@ esp32-dht-firmware/
 - GPIO4 is used for the DHT data pin by default but can be reconfigured in main.cpp.
 
 - The project uses PlatformIO dependency management to ensure reproducible builds.
+
+---
 
 ## 📜 License
 
