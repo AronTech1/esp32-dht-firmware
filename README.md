@@ -1,5 +1,4 @@
 
-````markdown
 # ESP32-WROOM DHT Sensor Firmware
 
 ## 📌 Project Overview
