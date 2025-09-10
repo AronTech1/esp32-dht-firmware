@@ -57,10 +57,22 @@ Temperature: 25.4 °C  |  Humidity: 60.1 %
 
 ## 📂 Repository Structure  
 esp32-dht-firmware/
-├── src/
-│   └── main.cpp        # Firmware source code
-├── include/            # Header files (optional, not used here)
-├── lib/                # Additional libraries (if needed)
-├── platformio.ini      # PlatformIO configuration
-├── README.md           # Documentation
-└── .gitignore          # Ignored build files
+- ├── src/
+- │   └── main.cpp        # Firmware source code
+- ├── include/            # Header files (optional, not used here)
+- ├── lib/                # Additional libraries (if needed)
+- ├── platformio.ini      # PlatformIO configuration
+- ├── README.md           # Documentation
+- └── .gitignore          # Ignored build files
+
+## Project Notes
+
+- The firmware is designed for easy portability across ESP32-WROOM based boards.
+
+- GPIO4 is used for the DHT data pin by default but can be reconfigured in main.cpp.
+
+- The project uses PlatformIO dependency management to ensure reproducible builds.
+
+## 📜 License
+
+This project is released under the terms of the MIT License
