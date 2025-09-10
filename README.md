@@ -56,15 +56,16 @@ DHT Sensor Reading Example
 Temperature: 25.4 °C  |  Humidity: 60.1 %  
 
 ## 📂 Repository Structure  
+```text
 esp32-dht-firmware/
-- ├── src/
-- │   └── main.cpp        # Firmware source code
-- ├── include/            # Header files (optional, not used here)
-- ├── lib/                # Additional libraries (if needed)
-- ├── platformio.ini      # PlatformIO configuration
-- ├── README.md           # Documentation
-- └── .gitignore          # Ignored build files
-
+├── src/
+│   └── main.cpp        # Firmware source code
+├── include/            # Header files (optional, not used here)
+├── lib/                # Additional libraries (if needed)
+├── platformio.ini      # PlatformIO configuration
+├── README.md           # Documentation
+└── .gitignore          # Ignored build files
+```
 ## Project Notes
 
 - The firmware is designed for easy portability across ESP32-WROOM based boards.
