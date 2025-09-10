@@ -51,5 +51,6 @@ The firmware reads temperature and humidity values every **1 minute** and prints
 ## ▶️ Expected Output
 When running, you should see logs similar to:
 
-DHT Sensor Reading Example
+DHT Sensor Reading Example␣␣
 Temperature: 25.4 °C  |  Humidity: 60.1 %
+
