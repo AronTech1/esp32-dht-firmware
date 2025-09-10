@@ -58,9 +58,9 @@ Temperature: 25.4 °C  |  Humidity: 60.1 %
 ## 📂 Repository Structure
 esp32-dht-firmware/
 ├── src/
-│   └── main.cpp        # Firmware source code
-├── include/            # Header files (optional, not used here)
-├── lib/                # Additional libraries (if needed)
-├── platformio.ini      # PlatformIO configuration
-├── README.md           # Documentation
-└── .gitignore          # Ignored build files
+│ └── main.cpp # Firmware source code
+├── include/ # Header files (optional, not used here)
+├── lib/ # Additional libraries (if needed)
+├── platformio.ini # PlatformIO configuration
+├── README.md # Documentation
+└── .gitignore # Ignored build files
